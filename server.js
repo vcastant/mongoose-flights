@@ -13,7 +13,6 @@ const app = express();
 // configure server 
 
 require('./config/database');
-
 app.set('view engine', 'ejs');
 
 // mount middleware
