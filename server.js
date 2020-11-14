@@ -2,8 +2,9 @@
 const express = require('express');
 const port = 3000;
 
-const morgan = require('morgan');
+const indexRouter = require('./routes/index');
 
+const morgan = require('morgan');
 
 // create the express app
 
@@ -22,6 +23,8 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 // TO DO mount routes
+
+app.use('/', indexRouter);
 
 //tell the application to listen
 
