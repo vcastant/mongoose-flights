@@ -1,14 +1,15 @@
 // require our modules ( mongoose)
 
 const mongoose = require ('mongoose');
+
 // set up our shortcut variable
-const db = mongoose.connections;
+const db = mongoose.connection;
 
 // connenct to the database server
 
 mongoose.connect('mongodb://localhost/flights', {
     useNewUrlParser: true,
-    userCreateIndex: true,
+    useCreateIndex: true,
     useUnifiedTopology: true
 });
 
@@ -16,3 +17,4 @@ mongoose.connect('mongodb://localhost/flights', {
 
 db.on('connected', function() {
     console.log('Connected to MongoDB on ${db.host}:${db.port}');
+});
