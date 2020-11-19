@@ -9,9 +9,10 @@ const indexCtrl = require('../controllers/index');
 
 const router = express.Router();
 
-// TODO: define our routes
-router.get('/', indexCtrl.index);
-
+// TODO: define our route
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Flights' });
+});
 // export the router object
 
 module.exports = router; 
