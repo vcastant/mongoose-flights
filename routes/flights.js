@@ -9,10 +9,10 @@ const flightsCtrl = require('../controllers/flights');
 const router = express.Router();
 
 // TODO: define our routes
-router.get('/', flightsCtrl.index);
 router.get('/new', flightsCtrl.new);
-router.get('/:id', flightsCtrl.show);
 router.post('/', flightsCtrl.create);
+router.get('/:id', flightsCtrl.show);
+router.get('/', flightsCtrl.index);
 
 // export the router object
 

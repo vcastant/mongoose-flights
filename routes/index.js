@@ -11,7 +11,7 @@ const router = express.Router();
 
 // TODO: define our route
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Flights' });
+  res.render('index', { title: 'Mongoose Flights' });
 });
 // export the router object
 
